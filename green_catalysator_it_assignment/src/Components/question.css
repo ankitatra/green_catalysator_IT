@@ -33,3 +33,9 @@ body {
     border:1px solid blue;
   }
   
+  Select{
+    font-size: 20px;
+  }
+  Select option{
+    font-size: 16px;
+  }

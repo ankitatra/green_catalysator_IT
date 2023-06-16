@@ -1,20 +1,22 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import QuestionBank from './QuestionBank';
-import Questions from './Question';
+import QuestionBank from '../Components/QuestionBank';
+import Questions from '../Components/Question';
 import {
   selectSubject,
   setQuestionSequence,
   rotateQuestions,
   randomizeQuestions
 } from '../Redux/action';
-import "./question.css"
-const ControlButton = () => {
+import "../Components/question.css"
+
+const Home = () => {
   const selectedSubject = useSelector(state => state.selectedSubject);
   const dispatch = useDispatch();
 
   const handleSubjectChange = e => {
-    dispatch(selectSubject(e.target.value));
+    console.log(e.target.value)
+    e.target.value!=="" && dispatch(selectSubject(e.target.value));
   };
 
   const handleQuestionSequence = () => {
@@ -37,8 +39,8 @@ const ControlButton = () => {
         <div style={{background:"lightgreen",textAlign:"center",padding:"10px"}}>Online exam</div>
       </div>
       <div style={{display:"flex",justifyContent:"flex-end",marginTop:"10px"}}>
-      <p style={{marginRight:"40px"}}>Subject:</p>
-      <select style={{width:"200px",height:"30px",marginRight:"40px",marginTop:"10px"}} value={selectedSubject} onChange={handleSubjectChange}>
+      <p style={{marginRight:"40px",fontSize:"20px"}}>Subject:</p>
+      <select style={{width:"200px",height:"30px",marginRight:"40px",marginTop:"14px"}} value={selectedSubject} onChange={handleSubjectChange}>
         <option value="">Select Subject</option>
         <option value="physics">Physics</option>
         <option value="math">Math</option>
@@ -60,4 +62,4 @@ const ControlButton = () => {
   );
 };
 
-export default ControlButton;
+export default Home;

@@ -1,24 +1,24 @@
-export const selectSubject = subject => {
+export const selectSubject = (subject) => {
   return {
-    type: 'SELECT_SUBJECT',
-    payload: subject
+    type: "SELECT_SUBJECT",
+    payload: subject,
   };
 };
 
 export const setQuestionSequence = () => {
   return {
-    type: 'SET_QUESTION_SEQUENCE'
+    type: "SET_QUESTION_SEQUENCE",
   };
 };
 
 export const rotateQuestions = () => {
   return {
-    type: 'ROTATE_QUESTIONS'
+    type: "ROTATE_QUESTIONS",
   };
 };
 
 export const randomizeQuestions = () => {
   return {
-    type: 'RANDOMIZE_QUESTIONS'
+    type: "RANDOMIZE_QUESTIONS",
   };
 };

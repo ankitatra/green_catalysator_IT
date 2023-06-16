@@ -1,10 +1,10 @@
 import React from "react";
-import ControlButton from "./Components/ControlButton";
+import Home from "./Page/Home";
 
 const App = () => {
   return (
     <div>
-      <ControlButton />
+      <Home />
     </div>
   );
 };
